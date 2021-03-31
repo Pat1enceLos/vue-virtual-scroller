@@ -189,8 +189,10 @@ export default {
           this.vscrollParent.$_undefinedSizes--
           this.vscrollParent.$_undefinedMap[this.id] = undefined
         }
-        this.$set(this.vscrollData.sizes, this.id, size)
-        this.$set(this.vscrollData.validSizes, this.id, true)
+        this.vscrollData.sizes[this.id] = size
+        this.vscrollData.validSizes[this.id] = true
+        // this.$set(this.vscrollData.sizes, this.id, size)
+        // this.$set(this.vscrollData.validSizes, this.id, true)
         if (this.emitResize) this.$emit('resize', this.id)
       }
     },
@@ -214,7 +216,7 @@ export default {
   },
 
   render () {
-    return h(this.tag, this.$slots.default)
+    return h(this.tag, this.$slots.default())
   },
 }
 </script>
