@@ -34,8 +34,8 @@
   "homepage": "https://github.com/Akryum/vue-virtual-scroller#readme",
   "dependencies": {
     "scrollparent": "^2.0.1",
-    "vue-observe-visibility": "^0.4.4",
-    "vue-resize": "^0.4.5"
+    "vue-observe-visibility": "https://github.com/Akryum/vue-observe-visibility.git#next",
+    "vue-resize": "^2.0.0-alpha.1"
   },
   "peerDependencies": {
     "vue": "^3.0.0"

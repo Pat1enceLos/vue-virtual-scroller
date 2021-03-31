@@ -534,6 +534,8 @@ var script = {
 
 
         if (!view) {
+          if (_i3 === items.length - 1) this.$emit('scrolledtoend');
+          if (_i3 === 0) this.$emit('scrolledtobegin');
           type = item[typeField];
           unusedPool = unusedViews.get(type);
 
@@ -1193,7 +1195,6 @@ var script$2 = {
     }
   },
   render: function render(h) {
-    console.log('render', h);
     return h(this.tag, this.$slots.default);
   }
 };

@@ -54,7 +54,7 @@
 </template>
 
 <script>
-import { shallowReactive } from 'vue';
+import { shallowReactive } from 'vue'
 import { ResizeObserver } from 'vue-resize'
 import { ObserveVisibility } from 'vue-observe-visibility'
 import ScrollParent from 'scrollparent'
