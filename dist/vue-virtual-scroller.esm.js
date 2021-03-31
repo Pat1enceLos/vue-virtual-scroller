@@ -1,4 +1,4 @@
-import { shallowReactive, resolveComponent, resolveDirective, withDirectives, openBlock, createBlock, renderSlot, createCommentVNode, createVNode, Fragment, renderList, mergeProps, toHandlers, withCtx, reactive } from 'vue';
+import { shallowReactive, resolveComponent, resolveDirective, withDirectives, openBlock, createBlock, renderSlot, createCommentVNode, createVNode, Fragment, renderList, mergeProps, toHandlers, withCtx, h, reactive } from 'vue';
 import { ResizeObserver as ResizeObserver$1 } from 'vue-resize';
 import { ObserveVisibility } from 'vue-observe-visibility';
 import ScrollParent from 'scrollparent';
@@ -1194,7 +1194,7 @@ var script$2 = {
       this.applySize(width, height);
     }
   },
-  render: function render(h) {
+  render: function render() {
     return h(this.tag, this.$slots.default);
   }
 };

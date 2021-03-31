@@ -1675,8 +1675,8 @@
         this.applySize(width, height);
       }
     },
-    render: function render(h) {
-      return h(this.tag, this.$slots.default);
+    render: function render() {
+      return vue.h(this.tag, this.$slots.default);
     }
   };
 
