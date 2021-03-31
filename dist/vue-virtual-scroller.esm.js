@@ -1180,7 +1180,7 @@ function registerComponents(Vue, prefix) {
 
 var plugin = {
   // eslint-disable-next-line no-undef
-  version: "1.0.14",
+  version: "1.0.15",
   install: function install(Vue, options) {
     var finalOptions = Object.assign({}, {
       installComponents: true,
