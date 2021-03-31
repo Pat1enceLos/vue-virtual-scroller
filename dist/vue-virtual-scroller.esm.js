@@ -952,15 +952,6 @@ var script$1 = {
   }
 };
 
-var _hoisted_1$1 = {
-  "slot-scope": "{ item: itemWithSize, index, active }"
-};
-var _hoisted_2$1 = {
-  slot: "before"
-};
-var _hoisted_3 = {
-  slot: "after"
-};
 function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_RecycleScroller = resolveComponent("RecycleScroller");
 
@@ -974,16 +965,25 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
     onResize: $options.onScrollerResize,
     onVisible: $options.onScrollerVisible
   }, toHandlers($options.listeners)), {
-    default: withCtx(function () {
-      return [createVNode("template", _hoisted_1$1, [renderSlot(_ctx.$slots, "default", {
-        item: _ctx.itemWithSize.item,
-        index: _ctx.index,
-        active: _ctx.active,
-        itemWithSize: _ctx.itemWithSize
-      })]), createVNode("template", _hoisted_2$1, [renderSlot(_ctx.$slots, "before")]), createVNode("template", _hoisted_3, [renderSlot(_ctx.$slots, "after")])];
+    default: withCtx(function (_ref) {
+      var itemWithSize = _ref.item,
+          index = _ref.index,
+          active = _ref.active;
+      return [renderSlot(_ctx.$slots, "default", {
+        item: itemWithSize.item,
+        index: index,
+        active: active,
+        itemWithSize: itemWithSize
+      })];
     }),
-    _: 3
-    /* FORWARDED */
+    before: withCtx(function () {
+      return [renderSlot(_ctx.$slots, "before")];
+    }),
+    after: withCtx(function () {
+      return [renderSlot(_ctx.$slots, "after")];
+    }),
+    _: 1
+    /* STABLE */
 
   }, 16
   /* FULL_PROPS */
@@ -1297,7 +1297,7 @@ function registerComponents(Vue, prefix) {
 
 var plugin = {
   // eslint-disable-next-line no-undef
-  version: "1.0.12",
+  version: "1.0.13",
   install: function install(Vue, options) {
     var finalOptions = Object.assign({}, {
       installComponents: true,

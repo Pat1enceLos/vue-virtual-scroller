@@ -1433,15 +1433,6 @@
     }
   };
 
-  var _hoisted_1$2 = {
-    "slot-scope": "{ item: itemWithSize, index, active }"
-  };
-  var _hoisted_2$1 = {
-    slot: "before"
-  };
-  var _hoisted_3 = {
-    slot: "after"
-  };
   function render$2(_ctx, _cache, $props, $setup, $data, $options) {
     var _component_RecycleScroller = vue.resolveComponent("RecycleScroller");
 
@@ -1455,16 +1446,25 @@
       onResize: $options.onScrollerResize,
       onVisible: $options.onScrollerVisible
     }, vue.toHandlers($options.listeners)), {
-      default: vue.withCtx(function () {
-        return [vue.createVNode("template", _hoisted_1$2, [vue.renderSlot(_ctx.$slots, "default", {
-          item: _ctx.itemWithSize.item,
-          index: _ctx.index,
-          active: _ctx.active,
-          itemWithSize: _ctx.itemWithSize
-        })]), vue.createVNode("template", _hoisted_2$1, [vue.renderSlot(_ctx.$slots, "before")]), vue.createVNode("template", _hoisted_3, [vue.renderSlot(_ctx.$slots, "after")])];
+      default: vue.withCtx(function (_ref) {
+        var itemWithSize = _ref.item,
+            index = _ref.index,
+            active = _ref.active;
+        return [vue.renderSlot(_ctx.$slots, "default", {
+          item: itemWithSize.item,
+          index: index,
+          active: active,
+          itemWithSize: itemWithSize
+        })];
       }),
-      _: 3
-      /* FORWARDED */
+      before: vue.withCtx(function () {
+        return [vue.renderSlot(_ctx.$slots, "before")];
+      }),
+      after: vue.withCtx(function () {
+        return [vue.renderSlot(_ctx.$slots, "after")];
+      }),
+      _: 1
+      /* STABLE */
 
     }, 16
     /* FULL_PROPS */
@@ -1778,7 +1778,7 @@
 
   var plugin = {
     // eslint-disable-next-line no-undef
-    version: "1.0.12",
+    version: "1.0.13",
     install: function install(Vue, options) {
       var finalOptions = Object.assign({}, {
         installComponents: true,
