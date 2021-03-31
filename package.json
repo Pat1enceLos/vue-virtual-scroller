@@ -1,7 +1,7 @@
 {
   "name": "vue-virtual-scroller",
   "description": "Smooth scrolling for any amount of data",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "author": {
     "name": "Guillaume Chau",
     "email": "guillaume.b.chau@gmail.com"
@@ -34,7 +34,7 @@
   "homepage": "https://github.com/Akryum/vue-virtual-scroller#readme",
   "dependencies": {
     "scrollparent": "^2.0.1",
-    "vue-observe-visibility": "https://github.com/Akryum/vue-observe-visibility.git#next",
+    "vue-observe-visibility": "^2.0.0-alpha.1",
     "vue-resize": "^2.0.0-alpha.1"
   },
   "peerDependencies": {
