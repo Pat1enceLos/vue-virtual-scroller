@@ -8,7 +8,6 @@
     v-bind="$attrs"
     @resize="onScrollerResize"
     @visible="onScrollerVisible"
-    v-on="listeners"
   >
     <template v-slot:default="{ item: itemWithSize, index, active }">
       <slot
@@ -112,15 +111,6 @@ export default {
       return result
     },
 
-    listeners () {
-      const listeners = {}
-      for (const key in this.$listeners) {
-        if (key !== 'resize' && key !== 'visible') {
-          listeners[key] = this.$listeners[key]
-        }
-      }
-      return listeners
-    },
   },
 
   watch: {

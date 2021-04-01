@@ -1212,15 +1212,6 @@
         return result
       },
 
-      listeners () {
-        const listeners = {};
-        for (const key in this.$listeners) {
-          if (key !== 'resize' && key !== 'visible') {
-            listeners[key] = this.$listeners[key];
-          }
-        }
-        return listeners
-      },
     },
 
     watch: {
@@ -1322,7 +1313,7 @@
     }, _ctx.$attrs, {
       onResize: $options.onScrollerResize,
       onVisible: $options.onScrollerVisible
-    }, vue.toHandlers($options.listeners)), {
+    }), {
       default: vue.withCtx(({ item: itemWithSize, index, active }) => [
         vue.renderSlot(_ctx.$slots, "default", {
             item: itemWithSize.item,
@@ -1661,7 +1652,7 @@
 
   var plugin = {
     // eslint-disable-next-line no-undef
-    version: "1.0.15",
+    version: "1.0.16",
     install: function install(Vue, options) {
       var finalOptions = Object.assign({}, {
         installComponents: true,

@@ -1,4 +1,4 @@
-import { shallowReactive, resolveComponent, resolveDirective, withDirectives, openBlock, createBlock, renderSlot, createCommentVNode, createVNode, Fragment, renderList, mergeProps, toHandlers, withCtx, h, reactive } from 'vue';
+import { shallowReactive, resolveComponent, resolveDirective, withDirectives, openBlock, createBlock, renderSlot, createCommentVNode, createVNode, Fragment, renderList, mergeProps, withCtx, h, reactive } from 'vue';
 import { ResizeObserver as ResizeObserver$1 } from 'vue-resize';
 import { ObserveVisibility } from 'vue-observe-visibility';
 import ScrollParent from 'scrollparent';
@@ -731,15 +731,6 @@ var script$1 = {
       return result
     },
 
-    listeners () {
-      const listeners = {};
-      for (const key in this.$listeners) {
-        if (key !== 'resize' && key !== 'visible') {
-          listeners[key] = this.$listeners[key];
-        }
-      }
-      return listeners
-    },
   },
 
   watch: {
@@ -841,7 +832,7 @@ function render$1(_ctx, _cache, $props, $setup, $data, $options) {
   }, _ctx.$attrs, {
     onResize: $options.onScrollerResize,
     onVisible: $options.onScrollerVisible
-  }, toHandlers($options.listeners)), {
+  }), {
     default: withCtx(({ item: itemWithSize, index, active }) => [
       renderSlot(_ctx.$slots, "default", {
           item: itemWithSize.item,
@@ -1180,7 +1171,7 @@ function registerComponents(Vue, prefix) {
 
 var plugin = {
   // eslint-disable-next-line no-undef
-  version: "1.0.15",
+  version: "1.0.16",
   install: function install(Vue, options) {
     var finalOptions = Object.assign({}, {
       installComponents: true,
