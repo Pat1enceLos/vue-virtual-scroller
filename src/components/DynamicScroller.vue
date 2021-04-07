@@ -143,6 +143,7 @@ export default {
   deactivated () {
     this.vscrollData.active = false
   },
+  emits: ['vscroll:update', 'resize', 'visible'],
 
   methods: {
     onScrollerResize () {

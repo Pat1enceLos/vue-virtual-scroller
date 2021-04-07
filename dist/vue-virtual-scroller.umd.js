@@ -596,6 +596,7 @@
         default: false,
       },
     },
+    emits: ['scrolledtoend', 'scrolledtobegin'],
 
     data () {
       return {
@@ -1244,6 +1245,7 @@
     deactivated () {
       this.vscrollData.active = false;
     },
+    emits: ['vscroll:update', 'resize', 'visible'],
 
     methods: {
       onScrollerResize () {
@@ -1433,6 +1435,7 @@
         }
       },
     },
+    emits: ['vscroll:update', 'vscroll:update-size'],
 
     created () {
       if (this.$isServer) return

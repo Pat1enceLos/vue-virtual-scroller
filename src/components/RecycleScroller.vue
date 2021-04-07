@@ -118,6 +118,7 @@ export default {
       default: false,
     },
   },
+  emits: ['scrolledtoend', 'scrolledtobegin'],
 
   data () {
     return {

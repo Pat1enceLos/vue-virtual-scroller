@@ -99,6 +99,7 @@ export default {
       }
     },
   },
+  emits: ['vscroll:update', 'vscroll:update-size'],
 
   created () {
     if (this.$isServer) return

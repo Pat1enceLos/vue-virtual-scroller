@@ -115,6 +115,7 @@ var script = {
       default: false,
     },
   },
+  emits: ['scrolledtoend', 'scrolledtobegin'],
 
   data () {
     return {
@@ -763,6 +764,7 @@ var script$1 = {
   deactivated () {
     this.vscrollData.active = false;
   },
+  emits: ['vscroll:update', 'resize', 'visible'],
 
   methods: {
     onScrollerResize () {
@@ -952,6 +954,7 @@ var script$2 = {
       }
     },
   },
+  emits: ['vscroll:update', 'vscroll:update-size'],
 
   created () {
     if (this.$isServer) return
