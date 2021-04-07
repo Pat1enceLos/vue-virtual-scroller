@@ -118,7 +118,7 @@ export default {
       default: false,
     },
   },
-  emits: ['scrolledtoend', 'scrolledtobegin'],
+  emits: ['scrolledtoend', 'scrolledtobegin', 'visible', 'resize', 'hidden', 'update'],
 
   data () {
     return {

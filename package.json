@@ -1,10 +1,10 @@
 {
-  "name": "vue-virtual-scroller",
+  "name": "@oa/vue-virtual-scroller",
   "description": "Smooth scrolling for any amount of data",
   "version": "1.0.17",
   "author": {
-    "name": "Guillaume Chau",
-    "email": "guillaume.b.chau@gmail.com"
+    "name": "TanYang",
+    "email": "tanyang@xd.com"
   },
   "keywords": [
     "vue",
@@ -22,16 +22,14 @@
     "build:umd": "rollup --config build/rollup.config.umd.js",
     "prepublishOnly": "npm run lint && npm run build",
     "dev": "cross-env NODE_ENV=development rollup --config build/rollup.config.es.js --watch",
-    "lint": "eslint --ext .js,.vue src"
+    "lint": "eslint --ext .js,.vue src",
+    "publish": "npm publish --registry http://npm.xindong.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Akryum/vue-virtual-scroller.git"
+    "url": "git+https://github.com/Pat1enceLos/vue-virtual-scroller.git"
   },
-  "bugs": {
-    "url": "https://github.com/Akryum/vue-virtual-scroller/issues"
-  },
-  "homepage": "https://github.com/Akryum/vue-virtual-scroller#readme",
+  "homepage": "https://github.com/Pat1enceLos/vue-virtual-scroller",
   "dependencies": {
     "@rollup/plugin-babel": "^5.3.0",
     "scrollparent": "^2.0.1",
