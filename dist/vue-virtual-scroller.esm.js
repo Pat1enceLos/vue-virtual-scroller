@@ -1174,7 +1174,7 @@ function registerComponents(Vue, prefix) {
 
 var plugin = {
   // eslint-disable-next-line no-undef
-  version: "1.0.17",
+  version: "1.0.18",
   install: function install(Vue, options) {
     var finalOptions = Object.assign({}, {
       installComponents: true,
@@ -1192,18 +1192,15 @@ var plugin = {
     }
   }
 };
-
-var GlobalVue = null;
-
-if (typeof window !== 'undefined') {
-  GlobalVue = window.Vue;
-} else if (typeof global !== 'undefined') {
-  GlobalVue = global.Vue;
-}
-
-if (GlobalVue) {
-  GlobalVue.use(plugin);
-}
+// let GlobalVue = null
+// if (typeof window !== 'undefined') {
+//   GlobalVue = window.Vue
+// } else if (typeof global !== 'undefined') {
+//   GlobalVue = global.Vue
+// }
+// if (GlobalVue) {
+//   GlobalVue.use(plugin)
+// }
 
 export default plugin;
 export { script$1 as DynamicScroller, script$2 as DynamicScrollerItem, IdState, script as RecycleScroller };

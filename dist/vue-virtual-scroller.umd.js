@@ -1655,7 +1655,7 @@
 
   var plugin = {
     // eslint-disable-next-line no-undef
-    version: "1.0.17",
+    version: "1.0.18",
     install: function install(Vue, options) {
       var finalOptions = Object.assign({}, {
         installComponents: true,
@@ -1673,18 +1673,15 @@
       }
     }
   };
-
-  var GlobalVue = null;
-
-  if (typeof window !== 'undefined') {
-    GlobalVue = window.Vue;
-  } else if (typeof global !== 'undefined') {
-    GlobalVue = global.Vue;
-  }
-
-  if (GlobalVue) {
-    GlobalVue.use(plugin);
-  }
+  // let GlobalVue = null
+  // if (typeof window !== 'undefined') {
+  //   GlobalVue = window.Vue
+  // } else if (typeof global !== 'undefined') {
+  //   GlobalVue = global.Vue
+  // }
+  // if (GlobalVue) {
+  //   GlobalVue.use(plugin)
+  // }
 
   exports.DynamicScroller = script$2;
   exports.DynamicScrollerItem = script$3;
