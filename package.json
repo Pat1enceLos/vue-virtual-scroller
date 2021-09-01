@@ -1,7 +1,7 @@
 {
   "name": "@oa/vue-virtual-scroller",
   "description": "Smooth scrolling for any amount of data",
-  "version": "1.0.18",
+  "version": "1.0.19",
   "author": {
     "name": "TanYang",
     "email": "tanyang@xd.com"
@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
+    "@babel/preset-env": "^7.10.3",
     "@rollup/plugin-commonjs": "^11.0.2",
     "@rollup/plugin-node-resolve": "^7.1.1",
     "@rollup/plugin-replace": "^2.3.1",
